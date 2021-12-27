@@ -1,0 +1,41 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var name = "sachin";
+
+      var obj1 = {
+        name: "Dhoni",
+        address: {
+          city: "Hyd",
+        },
+      };
+
+      var obj2 = {
+        city: "Bhopal",
+      };
+
+      var obj3 = {
+        city: "Mumbai",
+      };
+
+      function fn(name, state) {
+        console.log(this.city);
+        console.log(name, state);
+      }
+      //   function fn1() {
+      //     var newfn = fn.bind(obj3);
+      //     newfn("Kabir", "MH");
+      //   }
+    </script>
+  </head>
+  <body>
+    <h2>Understanding call apply bind</h2>
+    <button onclick="fn.call(obj2,'Kabir','MP')">call</button>
+    <button onclick="fn.apply(obj2,['Kabir','MP'])">apply</button>
+    <button onclick="fn.bind(obj3)('Kabir','MH')">bind</button>
+  </body>
+</html>

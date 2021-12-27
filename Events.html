@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fn() {
+        alert("HelloSW");
+      }
+      function fn1() {
+        console.log("OnMouseEvent triggered");
+      }
+
+      function fn2() {
+        console.log("onMouse leave is triggered");
+      }
+    </script>
+  </head>
+  <body>
+    <h2 onclick="fn()">Click Me</h2>
+    <button>Action Performed</button><br />
+    <br />
+
+    Name:<input type="text" onmouseleave="fn2()" onmouseenter="fn1()" />
+  </body>
+</html>

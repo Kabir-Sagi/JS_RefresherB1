@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fnGetData() {
+        var pRef = document.getElementById("p1");
+        fetch("https://randomuser.me/api/?results=10")
+          .then((res) => {
+            console.log(res);
+            return res.json();
+          })
+          .then((data) => {
+            console.log(data);
+            pRef.innerText = data.results[0].location.city;
+          })
+
+          .catch((errormsg) => {
+            alert("Error while getting the data");
+          });
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <button onclick="fnGetData()">Get User Data</button>
+      <p id="p1"></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      div {
+        width: 500px;
+        box-shadow: 0 0 10px black;
+        padding: 30px;
+        margin: 100px auto;
+      }
+    </style>
+    <script>
+      function fnDOM() {
+        console.log(document);
+        var h2Ref = document.getElementById("i1");
+        var pRef = document.getElementById("p1");
+        var bodyRef = document.querySelector("body");
+
+        bodyRef.style.backgroundImage =
+          "url('https://images.pexels.com/photos/235986/pexels-photo-235986.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500')";
+
+        console.log(h2Ref.innerText);
+        h2Ref.innerText = "ReactJs";
+        h2Ref.style.color = "white";
+        pRef.style.color = "red";
+
+        var h5Ref = document.createElement("h5");
+        h5Ref.append("New Element is created");
+        pRef.appendChild(h5Ref);
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h2 id="i1">Javascript</h2>
+      <p id="p1">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet excepturi
+        obcaecati cupiditate. Accusantium quo in rerum nisi mollitia. Eveniet
+        voluptate, ipsam id doloribus expedita sint dignissimos eaque
+        reiciendis! Deleniti, magni.
+      </p>
+      <button onclick="fnDOM()">Update DOM</button>
+    </div>
+  </body>
+</html>
